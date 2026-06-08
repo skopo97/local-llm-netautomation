@@ -260,9 +260,9 @@ Show the version on a device.
 ```text
 Configure devices with OSPF.
 ```
-![OSPF-neighbor](ospf-neighbor.png)
+![OSPF-neighbor](images/ospf-neighbor.png)
 
-As you can see even some of the more difficult configurations can be applied with this model, but it requires a very specific prompt. With a larger model a prompt like 
+As you can see even some of the more difficult configurations can be applied with this model, but it requires a very specific prompt. With a larger model a prompt like. While the configuration wasn't perfect, it applied what was asked for.
 ```text
 Enable dynamic routing on routers
 ```
