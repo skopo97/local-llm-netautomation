@@ -254,7 +254,7 @@ List the available network devices.
 ```text
 Show the version on a device.
 ```
-![Devices](images/granite.png
+![Devices](images/granite.png)
 
 ## Enable OSPF on devices
 ```text
