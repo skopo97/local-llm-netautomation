@@ -1,3 +1,5 @@
+## This project was done as a school project. This is not exactly a guide on how to setup, but gives you insight on how the project worked and what the process was.
+
 # local-llm-netautomation
 Configure network devices using plain English through a local LLM, MCP tools, and pyATS.
 
@@ -27,6 +29,8 @@ For this project, the main use cases are:
 -   checking basic device information
     
 -   applying configuration changes
+
+Installing NetClaw was very straightfowarded and mostly consisted of clicking next. The download is avaiable at [NetClaw](https://github.com/automateyournetwork/netclaw)
     
     
 
@@ -146,7 +150,7 @@ During testing, Gemini Flash 2.5 was also tried via API. With a larger and more 
 
 # Topology and IP Addresses  
   
-![Network topology](/ai-verkko/kuvat/topologia.png)
+![Network topology](/images/topology.png)
   
 The lab is called `netclaw_lab` in the pyATS testbed file. It contains two routers and four switches. Most devices use Cisco IOS over SSH, but two switches use HP ProCurve with Telnet and Netmiko. 
   
@@ -185,7 +189,7 @@ All `10.0.99.x` management addresses are in **VLAN 99** and use a `/28` subnet m
 | R1 | 10.0.3.2 | Cisco IOS router |  
 | R2 | 10.0.3.1 | Cisco IOS router |  
   
-## Device Roles  
+## Device Roles
   
 | Device | Role |  
 |---|---|  
@@ -243,30 +247,26 @@ The basic workflow of the project is:
 
 ```text
 List the available network devices.
-
 ```
+![Devices](images/granite1.png)
 
 ## Run a show command
-
 ```text
-Show the VLANs on SW1.
-
+Show the version on a device.
 ```
+![Devices](images/granite.png
 
-## Configure an interface
-
+## Enable OSPF on devices
 ```text
-Configure interface Gi0/1 on SW1 as an access port in VLAN 10.
-
+Configure devices with OSPF.
 ```
+![OSPF-neighbor](ospf-neighbor.png)
 
-## Verify configuration
-
+As you can see even some of the more difficult configurations can be applied with this model, but it requires a very specific prompt. With a larger model a prompt like 
 ```text
-Show the running configuration for interface Gi0/1 on SW1.
-
+Enable dynamic routing on routers
 ```
-    
+would be good enough to apply the configuration.
 
 ## Common Issues
 
